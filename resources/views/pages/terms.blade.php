@@ -68,8 +68,8 @@
 
       <div class="border-t border-ink/15 pt-8">
         <div class="mono text-[11px] tracking-[0.25em] text-ink/50">/ SIGNED, ON BEHALF OF THE STUDIO</div>
-        <div class="display italic text-[42px] leading-none mt-2 text-velora">R. Prakoso</div>
-        <div class="mono text-[10px] tracking-[0.25em] text-ink/50 mt-2">FOUNDER · VELORA STUDIO · BANDUNG</div>
+        <div class="display italic text-[42px] leading-none mt-2 text-velora">FENHAIM</div>
+        <div class="mono text-[10px] tracking-[0.25em] text-ink/50 mt-2">FOUNDER · VELORA STUDIO · YOGYAKARTA</div>
       </div>
 
       <div class="flex flex-wrap gap-3">

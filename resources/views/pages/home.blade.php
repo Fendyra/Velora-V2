@@ -80,7 +80,7 @@
     <div class="flex marquee-track gap-12 whitespace-nowrap">
       @for ($k = 0; $k < 2; $k++)
         <div class="flex gap-12 items-center">
-          @foreach (['BY HAND', 'IN BANDUNG', 'SINCE 2019', 'THE ALMOST FORGOTTEN', 'NOW REDEFINED', 'FIFTEEN PIECES', 'TWICE A YEAR'] as $t)
+          @foreach (['BY HAND', 'IN YOGYAKARTA', 'SINCE 2019', 'THE ALMOST FORGOTTEN', 'NOW REDEFINED', 'FIFTEEN PIECES', 'TWICE A YEAR'] as $t)
             <span class="display text-[6vw] leading-none flex items-center gap-12">
               <span class="not-italic">{{ $t }}</span>
               <span class="italic text-velora">·</span>

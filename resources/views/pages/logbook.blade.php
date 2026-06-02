@@ -126,7 +126,7 @@
       <blockquote class="display text-[7vw] md:text-[4.5vw] leading-[1.05] italic max-w-5xl reveal-up-clip">
         "We are not a clothing brand. We are a slow-moving room of patient hands, with a tendency to make shirts when nothing else feels honest."
       </blockquote>
-      <div class="mt-6 mono text-[11px] tracking-[0.25em] text-ink/60 reveal">— FEHAIN, FOUNDER</div>
+      <div class="mt-6 mono text-[11px] tracking-[0.25em] text-ink/60 reveal">— FENHAIM, FOUNDER</div>
     </div>
   </section>
 </div>
