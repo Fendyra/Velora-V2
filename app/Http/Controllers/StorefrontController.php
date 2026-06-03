@@ -138,6 +138,11 @@ final class StorefrontController
         ]);
     }
 
+    public function shipping()
+    {
+        return view('pages.shipping');
+    }
+
     public function placeholder(string $page)
     {
         $titles = [

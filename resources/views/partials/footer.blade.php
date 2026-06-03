@@ -7,7 +7,7 @@
     <div class="flex marquee-track gap-10 whitespace-nowrap">
       @for ($k = 0; $k < 2; $k++)
         <div class="flex gap-10 items-center">
-          @foreach (['THE ALMOST FORGOTTEN', 'NOW REDEFINED', 'MADE IN YOGYAKARTA', 'SHIPPED ON THURSDAYS', '— SS26 —', 'BY HAND, BY VELORA'] as $t)
+          @foreach (['LESS NOISE. MORE PRESENCE.', 'NOW REDEFINED', 'MADE IN YOGYAKARTA', '24/7 SHOPPING', '— SS26 —', 'BY HAND, BY VELORA'] as $t)
             <span class="mono text-[11px] tracking-[0.3em] flex items-center gap-10">
               {{ $t }}
               <span class="w-1 h-1 rounded-full bg-velora inline-block"></span>
@@ -53,7 +53,6 @@
         <li><a href="{{ route('logbook') }}" class="ink-link">Logbook</a></li>
         <li><a href="{{ route('atelier') }}" class="ink-link">The Atelier</a></li>
         <li><a href="{{ route('stockists') }}" class="ink-link">Stockists</a></li>
-        <li><a href="#" class="ink-link">Sustainability</a></li>
       </ul>
     </div>
 
@@ -62,8 +61,8 @@
       <ul class="mt-3 space-y-1.5 text-[13px] text-bone/80">
         <li><a href="{{ route('faq') }}" class="ink-link">FAQ</a></li>
         <li><a href="{{ route('terms') }}" class="ink-link">Terms of Service</a></li>
-        <li><a href="#" class="ink-link">Shipping</a></li>
-        <li><a href="#" class="ink-link">Returns</a></li>
+        <li><a href="#" class="ink-link">Privacy Policy</a></li>
+        <li><a href="{{ route('shipping') }}" class="ink-link">Shipping</a></li>
       </ul>
     </div>
 
@@ -80,10 +79,9 @@
   <div class="border-t border-bone/15 px-6 lg:px-10 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-[11px] text-bone/45 mono tracking-wide">
     <div>© {{ $year }} VELORA STUDIO — ALL RIGHTS RESERVED</div>
     <div class="flex flex-wrap gap-4">
-      <a href="{{ route('terms') }}" class="ink-link">PRIVACY</a>
+      <a href="#" class="ink-link">PRIVACY</a>
       <a href="{{ route('terms') }}" class="ink-link">TERMS</a>
       <a href="{{ route('faq') }}" class="ink-link">FAQ</a>
-      <a href="#" class="ink-link">RETURNS</a>
     </div>
     <div>VOGUE / REDEFINED / 005</div>
   </div>
