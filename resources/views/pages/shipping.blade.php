@@ -29,40 +29,79 @@
       <div class="space-y-0 border-t border-ink/15">
         
         <!-- Step 1 -->
-        <div class="group border-b border-ink/15 py-6 flex gap-6 items-start transition-colors hover:bg-ink/5">
-          <div class="mono text-[12px] text-ink/40 mt-1">01</div>
-          <div>
-            <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Select & Secure</h3>
-            <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
-              Browse our collections and add desired pieces to your cart. Stock is strictly limited. Adding to cart does not reserve the item — checkout completes the reservation.
-            </p>
+        <div class="group border-b border-ink/15 py-8 flex flex-col gap-4 transition-colors hover:bg-ink/5">
+          <div class="flex gap-6 items-start">
+            <div class="mono text-[12px] text-ink/40 mt-1">01</div>
+            <div class="flex-1">
+              <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Select & Secure</h3>
+              <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
+                Browse our collections and add desired pieces to your cart. Stock is strictly limited. Adding to cart does not reserve the item — checkout completes the reservation.
+              </p>
+            </div>
+          </div>
+          <!-- Visual: Mini Product Selection -->
+          <div class="ml-[3.25rem] mt-4 p-4 border border-ink/10 bg-bone max-w-sm flex gap-4 items-center grayscale group-hover:grayscale-0 transition-all duration-500">
+            <div class="w-16 h-16 bg-ink/5 flex-shrink-0 flex items-center justify-center overflow-hidden">
+              <img src="{{ asset('assets/images/products/product4.png') }}" class="w-full h-full object-cover mix-blend-multiply" alt="Product">
+            </div>
+            <div class="flex-1">
+              <div class="text-[12px] font-medium">Static Curve Tee</div>
+              <div class="flex gap-2 mt-2">
+                <span class="border border-ink px-2 py-0.5 text-[10px] mono">SIZE M</span>
+                <span class="bg-velora text-bone px-2 py-0.5 text-[10px] mono">ADD TO BAG</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Step 2 -->
-        <div class="group border-b border-ink/15 py-6 flex gap-6 items-start transition-colors hover:bg-ink/5">
-          <div class="mono text-[12px] text-ink/40 mt-1">02</div>
-          <div>
-            <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Checkout & Payment</h3>
-            <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
-              Provide your shipping details. We accept major credit cards, GoPay, OVO, and Virtual Accounts via Midtrans. Payment must be completed within 15 minutes.
-            </p>
+        <div class="group border-b border-ink/15 py-8 flex flex-col gap-4 transition-colors hover:bg-ink/5">
+          <div class="flex gap-6 items-start">
+            <div class="mono text-[12px] text-ink/40 mt-1">02</div>
+            <div class="flex-1">
+              <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Checkout & Payment</h3>
+              <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
+                Provide your shipping details. We accept major credit cards, GoPay, OVO, and Virtual Accounts via Midtrans. Payment must be completed within 15 minutes.
+              </p>
+            </div>
+          </div>
+          <!-- Visual: Mini Checkout Form -->
+          <div class="ml-[3.25rem] mt-4 p-4 border border-ink/10 bg-bone max-w-sm grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="mono text-[9px] tracking-[0.2em] text-ink/50 mb-3">/ SECURE CHECKOUT</div>
+            <div class="space-y-2">
+              <div class="h-8 border border-ink/15 w-full flex items-center px-3 text-[10px] text-ink/40">Email Address</div>
+              <div class="flex gap-2">
+                <div class="h-8 border border-ink/15 w-1/2 flex items-center px-3 text-[10px] text-ink/40">First Name</div>
+                <div class="h-8 border border-ink/15 w-1/2 flex items-center px-3 text-[10px] text-ink/40">Last Name</div>
+              </div>
+              <div class="h-8 bg-ink text-bone w-full flex items-center justify-center text-[10px] mono tracking-widest mt-2">PROCEED TO PAYMENT</div>
+            </div>
           </div>
         </div>
 
         <!-- Step 3 -->
-        <div class="group border-b border-ink/15 py-6 flex gap-6 items-start transition-colors hover:bg-ink/5">
-          <div class="mono text-[12px] text-ink/40 mt-1">03</div>
-          <div>
-            <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Dispatch</h3>
-            <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
-              We pack orders on Wednesdays and dispatch every Thursday. You will receive an email containing your tracking number (AWB) once the courier collects the parcel.
-            </p>
+        <div class="group border-b border-ink/15 py-8 flex flex-col gap-4 transition-colors hover:bg-ink/5">
+          <div class="flex gap-6 items-start">
+            <div class="mono text-[12px] text-ink/40 mt-1">03</div>
+            <div class="flex-1">
+              <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Dispatch</h3>
+              <p class="mt-3 text-[13px] text-ink/70 leading-relaxed max-w-md">
+                We pack orders on Wednesdays and dispatch every Thursday. You will receive an email containing your tracking number (AWB) once the courier collects the parcel.
+              </p>
+            </div>
+          </div>
+          <!-- Visual: Mini Tracking -->
+          <div class="ml-[3.25rem] mt-4 p-4 border border-ink/10 bg-bone max-w-sm opacity-70 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center justify-between border-b border-ink/10 pb-2 mb-2">
+              <span class="mono text-[10px] tracking-widest">ORDER VL-8921</span>
+              <span class="text-[10px] bg-green-900 text-green-100 px-2 py-0.5 rounded-full">DISPATCHED</span>
+            </div>
+            <div class="text-[11px] text-ink/60 font-mono">AWB: JX8829100293</div>
           </div>
         </div>
 
         <!-- Step 4 -->
-        <div class="group border-b border-ink/15 py-6 flex gap-6 items-start transition-colors hover:bg-ink/5">
+        <div class="group border-b border-ink/15 py-8 flex gap-6 items-start transition-colors hover:bg-ink/5">
           <div class="mono text-[12px] text-ink/40 mt-1">04</div>
           <div>
             <h3 class="display text-[28px] italic leading-none group-hover:text-velora transition-colors">Arrival</h3>
