@@ -87,7 +87,7 @@
       <div class="sticky top-32 overflow-hidden bg-ink/5 border border-ink/15 shadow-sm" style="height: 600px;">
         <!-- Embedded Google Maps with Grayscale filter for aesthetic -->
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126438.33806399127!2d110.29395213600002!3d-7.77062402170366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1714020352000!5m2!1sen!2sid" 
+          src="https://maps.google.com/maps?q=Kost+Setyo+Mulyo,+Jl.+Seturan+Baru,+Yogyakarta&t=&z=16&ie=UTF8&iwloc=&output=embed" 
           width="100%" 
           height="100%" 
           style="border:0; filter: grayscale(90%) contrast(1.1) opacity(0.85);" 
