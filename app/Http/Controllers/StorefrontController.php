@@ -109,11 +109,32 @@ final class StorefrontController
 
     public function checkout()
     {
-        $items = array_values(session()->get('velora.cart', []));
-
         return view('pages.checkout', [
-            'items' => $items,
+            'items' => array_values(session('velora.cart', []))
         ]);
+    }
+
+    public function payment(string $order_number)
+    {
+        $order = \App\Models\Order::where('order_number', $order_number)->firstOrFail();
+        
+        return view('pages.payment', [
+            'order' => $order
+        ]);
+    }
+
+    public function cancelPayment(string $order_number)
+    {
+        $order = \App\Models\Order::where('order_number', $order_number)->firstOrFail();
+        
+        if ($order->payment_status === 'unpaid' || $order->payment_status === 'pending') {
+            $order->update([
+                'status' => 'cancelled',
+                'payment_status' => 'cancelled'
+            ]);
+        }
+
+        return redirect()->route('shop')->with('toast', 'Order cancelled.');
     }
 
     public function success(Request $request)

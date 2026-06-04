@@ -123,38 +123,14 @@
 
               <div class="hidden" data-step-panel="2">
                 <div class="mono text-[10px] tracking-[0.25em] text-ink/60 mb-3">/ PAYMENT METHOD</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  @foreach ([['id' => 'card', 'label' => 'Card'], ['id' => 'bank', 'label' => 'Bank transfer']] as $i => $m)
-                    <label class="border border-ink/15 px-4 py-4 cursor-pointer hover:border-ink transition-colors">
-                      <div class="flex items-center justify-between">
-                        <span class="flex items-center gap-3">
-                          <input type="radio" name="payment" value="{{ $m['id'] }}" {{ $i === 0 ? 'checked' : '' }}>
-                          <span class="text-[13px]">{{ $m['label'] }}</span>
-                        </span>
-                        <span class="mono text-[10px] tracking-[0.25em] text-ink/50">/ SECURE</span>
-                      </div>
-                    </label>
-                  @endforeach
-                </div>
-
-                <div class="mt-8 grid grid-cols-2 gap-4" data-card-fields>
-                  <div class="col-span-2">
-                    <label class="mono text-[10px] tracking-[0.25em] text-ink/60">CARD NUMBER</label>
-                    <input type="text" name="cardNumber" class="mt-2 w-full border border-ink/15 px-4 py-3 outline-none focus:border-ink" placeholder="4242 4242 4242 4242" />
-                  </div>
-                  <div>
-                    <label class="mono text-[10px] tracking-[0.25em] text-ink/60">EXPIRY</label>
-                    <input type="text" name="expiry" class="mt-2 w-full border border-ink/15 px-4 py-3 outline-none focus:border-ink" placeholder="12/30" />
-                  </div>
-                  <div>
-                    <label class="mono text-[10px] tracking-[0.25em] text-ink/60">CVC</label>
-                    <input type="text" name="cvc" class="mt-2 w-full border border-ink/15 px-4 py-3 outline-none focus:border-ink" placeholder="123" />
-                  </div>
+                <div class="border border-ink/15 px-6 py-8 text-center bg-mist/30">
+                  <p class="text-[14px] text-ink/80 mb-4">You will be redirected to Midtrans Secure Payment Gateway to complete your purchase safely.</p>
+                  <p class="text-[12px] text-ink/60 mb-6">Supports Credit Card, GoPay, ShopeePay, Virtual Accounts, and more.</p>
                 </div>
 
                 <div class="mt-8 flex items-center justify-between">
                   <button type="button" class="text-[12px] mono tracking-[0.25em] ink-link" data-prev-step>← BACK</button>
-                  <button type="submit" class="btn-mag border border-ink px-6 py-3 text-[12px] mono tracking-[0.25em]" data-pay>PAY →</button>
+                  <button type="submit" class="btn-mag border border-ink px-6 py-3 text-[12px] mono tracking-[0.25em]" data-pay>PROCEED TO PAYMENT →</button>
                 </div>
               </div>
 

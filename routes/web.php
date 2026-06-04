@@ -24,6 +24,8 @@ Route::get('/product/{id}', [StorefrontController::class, 'product'])->name('pro
 Route::get('/logbook', [StorefrontController::class, 'logbook'])->name('logbook');
 Route::get('/checkout', [StorefrontController::class, 'checkout'])->name('checkout');
 Route::post('/checkout/complete', [CheckoutController::class, 'complete'])->name('checkout.complete');
+Route::get('/payment/{order_number}', [StorefrontController::class, 'payment'])->name('payment.page');
+Route::post('/payment/{order_number}/cancel', [StorefrontController::class, 'cancelPayment'])->name('payment.cancel');
 Route::get('/success', [StorefrontController::class, 'success'])->name('success');
 Route::get('/faq', [StorefrontController::class, 'faq'])->name('faq');
 Route::get('/terms', [StorefrontController::class, 'terms'])->name('terms');

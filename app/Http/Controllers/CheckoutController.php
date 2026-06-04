@@ -6,6 +6,8 @@ use App\Models\Order;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Midtrans\Config;
+use Midtrans\Snap;
 
 final class CheckoutController
 {
@@ -56,10 +58,35 @@ final class CheckoutController
             ]);
         }
 
-        $request->session()->put('velora.lastOrderId', $orderId);
-        $request->session()->put('velora.lastOrderTotal', $total);
+        // Configure Midtrans
+        Config::$serverKey = config('midtrans.server_key');
+        Config::$isProduction = config('midtrans.is_production');
+        Config::$isSanitized = true;
+        Config::$is3ds = true;
+
+        $params = [
+            'transaction_details' => [
+                'order_id' => $orderId,
+                'gross_amount' => $total,
+            ],
+            'customer_details' => [
+                'first_name' => $request->input('firstName'),
+                'last_name' => $request->input('lastName'),
+                'email' => $request->input('email'),
+                'phone' => $request->input('phone'),
+            ],
+        ];
+
+        try {
+            $snapToken = Snap::getSnapToken($params);
+            $order->update(['snap_token' => $snapToken]);
+        } catch (\Exception $e) {
+            // Fallback if midtrans fails
+            return back()->with('error', 'Payment gateway error: ' . $e->getMessage());
+        }
+
         $request->session()->forget('velora.cart');
 
-        return redirect()->route('success', ['orderId' => $orderId, 'total' => $total]);
+        return redirect()->route('payment.page', ['order_number' => $orderId]);
     }
 }
