@@ -138,6 +138,11 @@ final class StorefrontController
         ]);
     }
 
+    public function privacy()
+    {
+        return view('pages.privacy');
+    }
+
     public function shipping()
     {
         return view('pages.shipping');

@@ -61,7 +61,7 @@
       <ul class="mt-3 space-y-1.5 text-[13px] text-bone/80">
         <li><a href="{{ route('faq') }}" class="ink-link">FAQ</a></li>
         <li><a href="{{ route('terms') }}" class="ink-link">Terms of Service</a></li>
-        <li><a href="#" class="ink-link">Privacy Policy</a></li>
+        <li><a href="{{ route('privacy') }}" class="ink-link">Privacy Policy</a></li>
         <li><a href="{{ route('shipping') }}" class="ink-link">Shipping</a></li>
       </ul>
     </div>
@@ -79,7 +79,7 @@
   <div class="border-t border-bone/15 px-6 lg:px-10 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-[11px] text-bone/45 mono tracking-wide">
     <div>© {{ $year }} VELORA STUDIO — ALL RIGHTS RESERVED</div>
     <div class="flex flex-wrap gap-4">
-      <a href="#" class="ink-link">PRIVACY</a>
+      <a href="{{ route('privacy') }}" class="ink-link">PRIVACY</a>
       <a href="{{ route('terms') }}" class="ink-link">TERMS</a>
       <a href="{{ route('faq') }}" class="ink-link">FAQ</a>
     </div>

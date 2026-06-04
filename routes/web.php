@@ -27,6 +27,7 @@ Route::post('/checkout/complete', [CheckoutController::class, 'complete'])->name
 Route::get('/success', [StorefrontController::class, 'success'])->name('success');
 Route::get('/faq', [StorefrontController::class, 'faq'])->name('faq');
 Route::get('/terms', [StorefrontController::class, 'terms'])->name('terms');
+Route::get('/privacy', [StorefrontController::class, 'privacy'])->name('privacy');
 Route::get('/shipping', [StorefrontController::class, 'shipping'])->name('shipping');
 
 Route::get('/atelier', [StorefrontController::class, 'placeholder'])->name('atelier')->defaults('page', 'atelier');
