@@ -148,10 +148,14 @@ final class StorefrontController
         return view('pages.shipping');
     }
 
+    public function atelier()
+    {
+        return view('pages.atelier');
+    }
+
     public function placeholder(string $page)
     {
         $titles = [
-            'atelier' => ['kicker' => '/ THE ATELIER', 'big' => 'Yogyakarta,', 'italic' => 'by hand.'],
             'stockists' => ['kicker' => '/ STOCKISTS', 'big' => 'Where to', 'italic' => 'find us.'],
             'account' => ['kicker' => '/ ACCOUNT', 'big' => 'Welcome', 'italic' => 'back.'],
         ];
