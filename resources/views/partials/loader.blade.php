@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="relative px-6 pb-6 flex items-end justify-between">
-    <div class="mono text-[11px] tracking-[0.25em] text-bone/60">LOADING&nbsp;THE&nbsp;ATELIER</div>
+    <div class="mono text-[11px] tracking-[0.25em] text-bone/60">CURATING...</div>
     <div data-loader-pct class="mono text-[11px] tracking-[0.25em] text-bone/60">000 / 100</div>
   </div>
   <div class="h-px bg-bone/15 mx-6 mb-6">
