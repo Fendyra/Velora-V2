@@ -29,7 +29,7 @@
       <p class="mt-4 text-[13px] leading-relaxed text-bone/65 max-w-xs">
         Jl. Seturan Raya 10, Sleman, Yogyakarta — Indonesia. By appointment, Mon–Sat, 11.00–20.00 WIB.
       </p>
-      <a class="ink-link mt-3 inline-block text-[12px] text-bone/80" href="#">hello@velora.studio</a>
+      <a class="ink-link mt-3 inline-block text-[12px] text-bone/80" href="mailto:hell0@velora.studio">hello@velora.studio</a>
       <div class="mt-5 flex gap-2">
         @foreach (['IG', 'TW', 'PIN', 'VSCO'] as $s)
           <a href="#" class="w-8 h-8 grid place-items-center border border-bone/20 rounded-full hover:bg-bone hover:text-ink transition-colors mono text-[10px] tracking-wide">{{ $s }}</a>

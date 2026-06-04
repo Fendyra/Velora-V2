@@ -114,7 +114,7 @@
       <div class="w-full">
         <p class="text-[13px] text-ink/65">No bots, no templates. The studio writes back within one business day, often the same morning.</p>
         <div class="mt-4 flex gap-3 flex-wrap">
-          <a href="mailto:hello@velora.studio" class="btn-mag border border-ink px-5 py-3 text-[12px] mono tracking-[0.25em]">EMAIL US →</a>
+          <a href="mailto:support@velora.studio" class="btn-mag border border-ink px-5 py-3 text-[12px] mono tracking-[0.25em]">EMAIL US →</a>
           <a href="{{ route('logbook') }}" class="ink-link self-center mono text-[11px] tracking-[0.25em] text-ink/60">READ THE LOGBOOK →</a>
         </div>
       </div>
