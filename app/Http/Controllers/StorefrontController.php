@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Support\VeloraCatalog;
+use App\Mail\SayHiEmail;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Mail;
 
 final class StorefrontController
 {
@@ -153,10 +154,25 @@ final class StorefrontController
         return view('pages.atelier');
     }
 
+    public function stockists()
+    {
+        return view('pages.stockists');
+    }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email'
+        ]);
+
+        Mail::to($request->email)->send(new SayHiEmail());
+
+        return back()->with('success_newsletter', 'Thank you. We will be in touch.');
+    }
+
     public function placeholder(string $page)
     {
         $titles = [
-            'stockists' => ['kicker' => '/ STOCKISTS', 'big' => 'Where to', 'italic' => 'find us.'],
             'account' => ['kicker' => '/ ACCOUNT', 'big' => 'Welcome', 'italic' => 'back.'],
         ];
 

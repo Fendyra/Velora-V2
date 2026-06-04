@@ -31,7 +31,9 @@ Route::get('/privacy', [StorefrontController::class, 'privacy'])->name('privacy'
 Route::get('/shipping', [StorefrontController::class, 'shipping'])->name('shipping');
 
 Route::get('/atelier', [StorefrontController::class, 'atelier'])->name('atelier');
-Route::get('/stockists', [StorefrontController::class, 'placeholder'])->name('stockists')->defaults('page', 'stockists');
+Route::get('/stockists', [StorefrontController::class, 'stockists'])->name('stockists');
+Route::post('/subscribe', [StorefrontController::class, 'subscribe'])->name('newsletter.subscribe');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/account', [AuthController::class, 'account'])->name('account');
     Route::post('/account/password', [AuthController::class, 'updatePassword'])->name('account.password.update');

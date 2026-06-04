@@ -19,7 +19,7 @@
   </div>
 
   <div class="grid grid-cols-2 md:grid-cols-12 gap-8 px-6 lg:px-10 py-12">
-    <div class="col-span-2 md:col-span-4 reveal">
+    <div class="col-span-2 md:col-span-3 reveal">
       <a href="{{ route('home') }}" class="flex items-center gap-2.5">
         <div class="w-6 h-6 border border-bone rounded-full grid place-items-center">
           <span class="display text-[14px] leading-none">V</span>
@@ -31,7 +31,7 @@
       </p>
       <a class="ink-link mt-3 inline-block text-[12px] text-bone/80" href="mailto:hell0@velora.studio">hello@velora.studio</a>
       <div class="mt-5 flex gap-2">
-        @foreach (['IG', 'TW', 'PIN', 'VSCO'] as $s)
+        @foreach (['IG', 'TT', 'PIN'] as $s)
           <a href="#" class="w-8 h-8 grid place-items-center border border-bone/20 rounded-full hover:bg-bone hover:text-ink transition-colors mono text-[10px] tracking-wide">{{ $s }}</a>
         @endforeach
       </div>
@@ -66,13 +66,25 @@
       </ul>
     </div>
 
-    <div class="col-span-2 md:col-span-2 reveal">
+    <div class="md:col-span-3 reveal">
       <div class="mono text-[10px] tracking-[0.25em] text-bone/45">/ LETTER</div>
-      <p class="mt-3 text-[12px] text-bone/65 leading-relaxed">A monthly note. No noise.</p>
-      <form class="mt-3 flex border-b border-bone/30 focus-within:border-bone transition-colors" onsubmit="return false;">
-        <input type="email" placeholder="your email" class="bg-transparent flex-1 py-1.5 outline-none text-[13px] placeholder-bone/40" />
-        <button class="text-[11px] mono tracking-[0.2em] py-1.5 ink-link" type="button">SEND →</button>
-      </form>
+      <p class="mt-3 text-[13px] text-bone/80">A monthly note. No noise.</p>
+      
+      @if (session('success_newsletter'))
+        <div class="mt-6 text-[11px] text-bone border border-bone/30 px-3 py-2 inline-block">
+          {{ session('success_newsletter') }}
+        </div>
+      @else
+        <form action="{{ route('newsletter.subscribe') }}" method="POST" class="mt-6 flex items-end border-b border-bone/20 pb-2 focus-within:border-bone transition-colors group">
+          @csrf
+          <input type="email" name="email" placeholder="your email" required
+                 class="bg-transparent border-none outline-none text-[13px] text-bone placeholder:text-bone/30 w-full p-0 focus:ring-0">
+          <button type="submit" class="mono text-[10px] tracking-widest text-bone/60 group-hover:text-bone transition-colors uppercase shrink-0 pb-1">SEND &rarr;</button>
+        </form>
+        @error('email')
+          <p class="mt-2 text-[10px] text-red-400">{{ $message }}</p>
+        @enderror
+      @endif
     </div>
   </div>
 
