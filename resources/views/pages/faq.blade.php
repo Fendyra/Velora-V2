@@ -54,7 +54,7 @@
     </div>
     <div class="col-span-12 md:col-span-4 reveal">
       <p class="text-[14px] text-ink/70 max-w-md">
-        If the answer is not here, write to us — we read every email. <a class="ink-link text-ink" href="mailto:hello@velora.studio">hello@velora.studio</a>.
+        If the answer is not here, write to us — we read every email. <a class="ink-link text-ink" href="mailto:hello.velorastudio19@gmail.com">hello.velorastudio19@gmail.com</a>.
       </p>
     </div>
   </div>
@@ -114,7 +114,7 @@
       <div class="w-full">
         <p class="text-[13px] text-ink/65">No bots, no templates. The studio writes back within one business day, often the same morning.</p>
         <div class="mt-4 flex gap-3 flex-wrap">
-          <a href="mailto:support@velora.studio" class="btn-mag border border-ink px-5 py-3 text-[12px] mono tracking-[0.25em]">EMAIL US →</a>
+          <a href="mailto:hello.velorastudio19@gmail.com" class="btn-mag border border-ink px-5 py-3 text-[12px] mono tracking-[0.25em]">EMAIL US →</a>
           <a href="{{ route('logbook') }}" class="ink-link self-center mono text-[11px] tracking-[0.25em] text-ink/60">READ THE LOGBOOK →</a>
         </div>
       </div>
