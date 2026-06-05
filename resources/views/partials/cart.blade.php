@@ -28,7 +28,8 @@
     @else
       <div class="flex-1 overflow-y-auto px-6 py-4 divide-y divide-ink/8">
         @foreach ($items as $idx => $it)
-          <div class="py-5 flex gap-4">
+          <div class="py-5 flex gap-4 items-center">
+            <input type="checkbox" value="{{ $it['key'] }}" class="cart-item-checkbox w-4 h-4 accent-ink cursor-pointer shrink-0" data-price="{{ (int) $it['price'] * (int) $it['qty'] }}" checked onchange="updateCartSubtotal()" />
             <div class="w-20 h-24 bg-mist img-zoom shrink-0">
               <img src="{{ $it['image'] }}" alt="{{ $it['name'] }}" class="w-full h-full object-contain p-2" />
             </div>
@@ -72,12 +73,56 @@
       <div class="border-t border-ink/10 p-6">
         <div class="flex items-baseline justify-between">
           <div class="mono text-[11px] tracking-[0.25em] text-ink/50">/ SUBTOTAL</div>
-          <div class="display text-[28px] leading-none">{{ VeloraCatalog::fmtIDR($subtotal) }}</div>
+          <div class="display text-[28px] leading-none" id="cart-subtotal-display">{{ VeloraCatalog::fmtIDR($subtotal) }}</div>
         </div>
         <p class="text-[11px] text-ink/50 mt-1">Shipping and duties calculated at checkout.</p>
-        <a href="{{ route('checkout') }}" class="mt-5 w-full btn-mag border border-ink py-4 text-[12px] mono tracking-[0.25em] flex items-center justify-center gap-3">CHECKOUT →</a>
+        
+        <form id="cart-checkout-form" method="POST" action="{{ route('cart.checkout.prepare') }}" class="hidden">
+            @csrf
+        </form>
+
+        <button type="button" onclick="submitCheckout()" class="mt-5 w-full btn-mag border border-ink py-4 text-[12px] mono tracking-[0.25em] flex items-center justify-center gap-3">CHECKOUT →</button>
         <button type="button" class="mt-3 w-full text-[12px] mono tracking-[0.2em] text-ink/50 ink-link" data-close-drawer>CONTINUE LOOKING</button>
       </div>
     @endif
   </aside>
 </div>
+
+<script>
+function updateCartSubtotal() {
+    const checkboxes = document.querySelectorAll('.cart-item-checkbox:checked');
+    let sum = 0;
+    checkboxes.forEach(cb => {
+        sum += parseInt(cb.getAttribute('data-price') || 0);
+    });
+    
+    const subtotalEl = document.getElementById('cart-subtotal-display');
+    if (subtotalEl) {
+        subtotalEl.innerText = 'IDR ' + sum.toLocaleString('id-ID').replace(/,/g, '.');
+    }
+}
+
+function submitCheckout() {
+    const form = document.getElementById('cart-checkout-form');
+    const checkboxes = document.querySelectorAll('.cart-item-checkbox:checked');
+    
+    if (checkboxes.length === 0) {
+        alert('Please select at least one item to checkout.');
+        return;
+    }
+    
+    // Clear old hidden inputs except csrf
+    const csrfToken = form.querySelector('input[name="_token"]').value;
+    form.innerHTML = '<input type="hidden" name="_token" value="' + csrfToken + '" />';
+    
+    checkboxes.forEach(cb => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'selected_items[]';
+        input.value = cb.value;
+        form.appendChild(input);
+    });
+    
+    form.submit();
+}
+</script>

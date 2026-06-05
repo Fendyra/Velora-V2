@@ -65,24 +65,12 @@
         @csrf
         <input type="hidden" name="id" value="{{ $p['id'] }}" />
 
-        <div class="reveal">
-          <div class="flex items-center justify-between mb-3">
-            <div class="mono text-[10px] tracking-[0.25em] text-ink/60">/ COLOUR — <span data-color-label>{{ $defaultColor }}</span></div>
-          </div>
-          <div class="flex gap-3">
-            @foreach ($p['colors'] as $c)
-              <label class="relative">
-                <input type="radio" name="color" value="{{ $c }}" class="sr-only" {{ $c === $defaultColor ? 'checked' : '' }} />
-                <span class="relative w-10 h-10 rounded-full border-2 transition-all inline-block {{ $c === $defaultColor ? 'border-velora' : 'border-ink/20 hover:border-ink' }}" style="background: {{ $colorSwatch[$c] ?? '#F1ECE2' }}" data-color-swatch="{{ $c }}"></span>
-              </label>
-            @endforeach
-          </div>
-        </div>
+
 
         <div class="mt-8 reveal">
           <div class="flex items-center justify-between mb-3">
             <div class="mono text-[10px] tracking-[0.25em] text-ink/60">/ SIZE</div>
-            <button class="ink-link text-[11px] mono tracking-[0.25em] text-ink/60" type="button">SIZE GUIDE →</button>
+            <button class="ink-link text-[11px] mono tracking-[0.25em] text-ink/60" type="button" data-open-modal="size-guide">SIZE GUIDE →</button>
           </div>
           <div class="grid grid-cols-5 gap-2" id="size-picker-container">
             @foreach ($allSizes as $s)
@@ -183,4 +171,7 @@
     </div>
   </section>
 </div>
+
+@include('partials.size-guide')
+
 @endsection

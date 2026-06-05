@@ -13,7 +13,10 @@ final class CheckoutController
 {
     public function complete(Request $request): RedirectResponse
     {
-        $items = array_values($request->session()->get('velora.cart', []));
+        $allCartItems = $request->session()->get('velora.cart', []);
+        $checkoutKeys = $request->session()->get('velora.checkout_keys', []);
+        
+        $items = array_values(array_filter($allCartItems, fn ($it) => in_array($it['key'], $checkoutKeys, true)));
         if (count($items) === 0) {
             return redirect()->route('shop');
         }
@@ -85,7 +88,13 @@ final class CheckoutController
             return back()->with('error', 'Payment gateway error: ' . $e->getMessage());
         }
 
-        $request->session()->forget('velora.cart');
+        // Only remove the checked out items from the cart
+        $cart = $request->session()->get('velora.cart', []);
+        foreach ($checkoutKeys as $key) {
+            unset($cart[$key]);
+        }
+        $request->session()->put('velora.cart', $cart);
+        $request->session()->forget('velora.checkout_keys');
 
         return redirect()->route('payment.page', ['order_number' => $orderId]);
     }

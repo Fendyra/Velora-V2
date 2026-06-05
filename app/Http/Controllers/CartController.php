@@ -90,4 +90,17 @@ final class CartController
 
         return back();
     }
+
+    public function prepareCheckout(Request $request): RedirectResponse
+    {
+        $selectedKeys = $request->input('selected_items', []);
+        
+        if (empty($selectedKeys) || !is_array($selectedKeys)) {
+            return back()->with('toast', 'Please select at least one item to checkout.');
+        }
+
+        $request->session()->put('velora.checkout_keys', $selectedKeys);
+
+        return redirect()->route('checkout');
+    }
 }

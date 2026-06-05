@@ -109,8 +109,20 @@ final class StorefrontController
 
     public function checkout()
     {
+        $allCartItems = session('velora.cart', []);
+        $checkoutKeys = session('velora.checkout_keys', []);
+        
+        // Filter the cart to only include the items selected for checkout
+        $items = array_filter($allCartItems, fn ($it) => in_array($it['key'], $checkoutKeys, true));
+        $items = array_values($items);
+        
+        // If no valid items are found, maybe the session expired or user accessed directly
+        if (count($items) === 0 && count($allCartItems) > 0) {
+            return redirect()->route('shop')->with('toast', 'Please select items from your bag to checkout.');
+        }
+
         return view('pages.checkout', [
-            'items' => array_values(session('velora.cart', []))
+            'items' => $items
         ]);
     }
 
