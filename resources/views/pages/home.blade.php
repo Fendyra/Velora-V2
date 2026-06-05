@@ -20,39 +20,59 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 gap-6 mt-8 lg:mt-12 items-end">
-      <div class="col-span-12 lg:col-span-7 relative z-10">
-        <div class="secnum reveal">/ 01 — INDEX</div>
-        <h1 class="display text-[16vw] lg:text-[12vw] mt-4 reveal-up-clip overflow-hidden">
-          <span class="block">Vogue,</span>
-          <span class="block italic text-velora -mt-[2vw]">re&shy;defined.</span>
-        </h1>
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl">
-          <p class="md:col-span-2 text-[15px] leading-relaxed text-ink/80 reveal">
-            A small Indonesian house making garments at a stubborn pace — fifteen pieces, twice a year. Built to be reached for, not photographed.
-          </p>
-          <div class="reveal">
-            <div class="mono text-[11px] tracking-[0.25em] text-ink/50">/ ON OFFER</div>
-            <div class="display text-[36px] leading-none mt-2">14<span class="italic">/15</span></div>
-            <div class="text-[12px] text-ink/60 mt-1">pieces from drop 002 remaining</div>
-          </div>
+    <div class="grid grid-cols-12 gap-6 mt-8 lg:mt-12 items-stretch">
+      <div class="col-span-12 lg:col-span-7 relative z-10 flex flex-col justify-between py-4 lg:py-10">
+        
+        <!-- Top Title Area -->
+        <div>
+          <div class="secnum reveal">/ 01 — INDEX</div>
+          
+          <h1 class="display text-[16vw] lg:text-[11vw] leading-[0.85] mt-8 lg:mt-12 reveal group">
+            <span class="block">Vogue,</span>
+            <span class="italic text-ink/40 transition-colors duration-500 group-hover:text-velora" style="-webkit-text-stroke: 1px currentColor;">
+              redefined.
+            </span>
+          </h1>
         </div>
-        <div class="mt-10 flex items-center gap-4 reveal">
-          <a href="{{ route('shop') }}" class="btn-mag border border-ink px-7 py-4 text-[12px] mono tracking-[0.25em] flex items-center gap-3">
-            ENTER THE SHOP <span class="inline-block">→</span>
-          </a>
-          <a href="{{ route('logbook') }}" class="text-[13px] ink-link">Read the logbook</a>
+
+        <!-- Bottom Refined Area -->
+        <div class="mt-12 lg:mt-0 pt-8 border-t border-ink/15">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+            
+            <div class="md:col-span-7 reveal">
+              <p class="text-[14px] leading-relaxed text-ink/80 max-w-sm">
+                A small Indonesian house making garments at a stubborn pace — fifteen pieces, twice a year. Built to be reached for, not photographed.
+              </p>
+              
+              <div class="mt-8 flex items-center gap-6">
+                <a href="{{ route('shop') }}" class="btn-mag group border border-ink px-7 py-4 text-[12px] mono tracking-[0.25em] flex items-center gap-3 hover:bg-ink hover:text-bone transition-colors">
+                  ENTER THE SHOP 
+                  <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+                <a href="{{ route('logbook') }}" class="text-[12px] mono tracking-[0.15em] ink-link">READ LOGBOOK</a>
+              </div>
+            </div>
+
+            <div class="md:col-span-5 reveal flex md:justify-end">
+              <div class="text-left md:text-right">
+                <div class="mono text-[10px] tracking-[0.25em] text-ink/50">/ ON OFFER</div>
+                <div class="display text-[42px] leading-none mt-2">14<span class="italic text-ink/40">/15</span></div>
+                <div class="text-[11px] mono tracking-[0.1em] text-ink/50 mt-2 uppercase">pieces from drop 002</div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
       <div class="col-span-12 lg:col-span-5 relative">
         <div class="relative aspect-[3/4] img-zoom overflow-hidden">
           <div data-parallax data-parallax-speed="0.18" class="absolute inset-0 will-y">
-            <img src="/assets/images/home/landingpage/model4.png" alt="" class="w-full h-full object-cover scale-110" />
+            <img src="/assets/images/home/landingpage/homepage1.png" alt="" class="w-full h-full object-cover scale-110" />
           </div>
           <div class="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent"></div>
           <div class="absolute left-4 top-4 mono text-[10px] tracking-[0.25em] text-bone reveal">
-            /001 — BUSY WEEKENDS
+            /001 — VELORA VOGUE
           </div>
           <div class="absolute left-4 bottom-4 right-4 flex items-end justify-between text-bone reveal">
             <div>
@@ -61,18 +81,11 @@
             </div>
             <div class="mono text-[10px] tracking-[0.25em] text-right">
               <div>SHOT BY</div>
-              <div class="opacity-70">A. PRATAMA</div>
+              <div class="opacity-70">A. Hanif</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink/50">
-      <span class="mono text-[10px] tracking-[0.3em]">SCROLL</span>
-      <span class="w-px h-12 bg-ink/30 relative overflow-hidden">
-        <span class="absolute inset-0 bg-ink animate-[loaderFill_2s_linear_infinite]" style="transform-origin: top"></span>
-      </span>
     </div>
   </section>
 
@@ -91,7 +104,7 @@
     </div>
   </section>
 
-  <section class="px-6 lg:px-10 mt-32">
+  <section class="px-6 lg:px-10 mt-24">
     <div class="flex items-end justify-between mb-10">
       <div>
         <div class="secnum reveal">/ 02 — WARDROBE</div>
@@ -144,12 +157,13 @@
     </div>
   </section>
 
-  <section class="mt-40 relative overflow-hidden">
+  <section class="mt-24 relative overflow-hidden">
     <div class="grid grid-cols-12 gap-6 px-6 lg:px-10 items-center">
-      <div class="col-span-12 lg:col-span-5">
+      <div class="col-span-12 lg:col-span-5 flex flex-col justify-center">
         <div class="secnum reveal">/ 03 — MANIFESTO</div>
-        <h3 class="display text-[8vw] lg:text-[5.5vw] leading-[0.95] mt-3 reveal-up-clip">
-          The almost <span class="italic">forgotten,</span> now <span class="text-velora italic">redefined.</span>
+        <h3 class="display text-[8vw] lg:text-[5.5vw] leading-[0.95] mt-6 reveal group">
+          The almost <span class="italic text-ink/40 transition-colors duration-500 group-hover:text-velora">forgotten,</span><br/>
+          lives <span class="italic text-velora hollow-text transition-all duration-500 group-hover:text-ink" style="-webkit-text-stroke: 1.5px currentColor;">on.</span>
         </h3>
         <p class="mt-8 max-w-md text-[15px] leading-relaxed text-ink/80 reveal">
           We do not chase the season. We make for the people who keep one shirt for ten years, and want it to deserve that. Bone-white, ink, indigo and sand — a palette of patience.
@@ -158,24 +172,9 @@
           VISIT THE ATELIER →
         </a>
       </div>
-
-      <div class="col-span-12 lg:col-span-7 grid grid-cols-12 gap-3">
-        <div class="col-span-5 aspect-[3/4] img-zoom overflow-hidden reveal-up-clip">
-          <img src="/assets/images/home/landingpage/model1.jpg" class="w-full h-full object-cover" />
-        </div>
-        <div class="col-span-7 grid grid-rows-2 gap-3">
-          <div class="aspect-[16/10] img-zoom overflow-hidden reveal-up-clip" style="transition-delay: 150ms">
-            <img src="/assets/images/home/landingpage/model2.jpg" class="w-full h-full object-cover" />
-          </div>
-          <div class="aspect-[16/10] img-zoom overflow-hidden reveal-up-clip" style="transition-delay: 300ms">
-            <img src="/assets/images/home/landingpage/model3.jpg" class="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section class="mt-32 bg-ink text-bone py-24 px-6 lg:px-10 overflow-hidden">
+  <section class="mt-24 bg-ink text-bone py-24 px-6 lg:px-10 overflow-hidden">
     <div class="secnum reveal text-bone/60">/ 04 — RECORD</div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-10">
       @foreach ([
@@ -192,11 +191,11 @@
     </div>
   </section>
 
-  <section class="mt-32 px-6 lg:px-10">
+  <section class="mt-24 px-6 lg:px-10">
     <div class="flex items-end justify-between mb-10">
       <div>
         <div class="secnum reveal">/ 05 — COLLECTIONS</div>
-        <h3 class="display text-[8vw] lg:text-[6vw] leading-none mt-3 reveal-up-clip">Three chapters.</h3>
+        <h3 class="display text-[8vw] lg:text-[6vw] leading-none mt-3 reveal">Three chapters.</h3>
       </div>
       <a href="{{ route('logbook') }}" class="hidden md:flex items-center gap-2 text-[12px] mono tracking-[0.25em] ink-link">VIEW THE LOGBOOK →</a>
     </div>
@@ -218,12 +217,12 @@
     </div>
   </section>
 
-  <section class="mt-40 px-6 lg:px-10">
+  <section class="mt-24 px-6 lg:px-10">
     <div class="border-t border-b border-ink/15 py-16 grid grid-cols-12 items-center gap-6">
       <div class="col-span-12 md:col-span-7">
         <div class="secnum reveal">/ 06 — THE LETTER</div>
-        <h3 class="display text-[8vw] md:text-[5vw] leading-[0.95] mt-3 reveal-up-clip">
-          First access. <span class="italic text-velora">Quietly.</span>
+        <h3 class="display text-[8vw] md:text-[5vw] leading-[0.95] mt-3 reveal group">
+          First access. <span class="italic text-velora transition-colors duration-500 group-hover:text-ink">Quietly.</span>
         </h3>
         <p class="mt-4 max-w-md text-[14px] text-ink/70 reveal">
           We send one note a month, before a drop. No discount codes, no urgency, no noise.

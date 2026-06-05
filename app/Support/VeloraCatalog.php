@@ -35,10 +35,10 @@ final class VeloraCatalog
         return [
             [
                 'id' => 'C03',
-                'title' => 'Busy Weekends',
+                'title' => 'The Everyday',
                 'period' => 'AUTUMN — 2026',
                 'count' => 14,
-                'hero' => '/assets/images/home/landingpage/model4.png',
+                'hero' => '/assets/images/home/landingpage/collection1.png',
                 'blurb' => 'A study in restraint. Garments built for the in-between hours — the walk home, the slow morning, the late call.',
             ],
             [
@@ -46,7 +46,7 @@ final class VeloraCatalog
                 'title' => 'Quiet Riot',
                 'period' => 'SPRING — 2026',
                 'count' => 11,
-                'hero' => '/assets/images/about/about1.jpg',
+                'hero' => '/assets/images/home/landingpage/collection2.png',
                 'blurb' => 'Softened protest. Statement silhouettes flattened by craft, dyed in mineral tones, finished by hand.',
             ],
             [
@@ -54,7 +54,7 @@ final class VeloraCatalog
                 'title' => 'Almost Forgotten',
                 'period' => 'WINTER — 2025',
                 'count' => 9,
-                'hero' => '/assets/images/home/landingpage/privilage.jpg',
+                'hero' => '/assets/images/home/landingpage/collection3.png',
                 'blurb' => 'The archive piece. Forms revived from a dropped capsule, re-cut at the atelier in Bandung.',
             ],
         ];
