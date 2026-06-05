@@ -49,7 +49,7 @@
                   ENTER THE SHOP 
                   <span class="inline-block transform group-hover:translate-x-1 transition-transform">→</span>
                 </a>
-                <a href="{{ route('logbook') }}" class="text-[12px] mono tracking-[0.15em] ink-link">READ LOGBOOK</a>
+                <a href="{{ route('lookbook') }}" class="text-[12px] mono tracking-[0.15em] ink-link">READ LOOKBOOK</a>
               </div>
             </div>
 
@@ -197,7 +197,7 @@
         <div class="secnum reveal">/ 05 — COLLECTIONS</div>
         <h3 class="display text-[8vw] lg:text-[6vw] leading-none mt-3 reveal">Three chapters.</h3>
       </div>
-      <a href="{{ route('logbook') }}" class="hidden md:flex items-center gap-2 text-[12px] mono tracking-[0.25em] ink-link">VIEW THE LOGBOOK →</a>
+      <a href="{{ route('lookbook') }}" class="hidden md:flex items-center gap-2 text-[12px] mono tracking-[0.25em] ink-link">VIEW THE LOOKBOOK →</a>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       @foreach ($collections as $i => $c)

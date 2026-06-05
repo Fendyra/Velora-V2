@@ -93,7 +93,7 @@
 
         <div class="mt-10 flex flex-wrap gap-4">
           <a href="{{ route('shop') }}" class="btn-mag border border-ink px-6 py-3 text-[12px] mono tracking-[0.25em]">CONTINUE SHOPPING →</a>
-          <a href="{{ route('logbook') }}" class="ink-link mono text-[11px] tracking-[0.25em] text-ink/60 self-center">READ THE LOGBOOK →</a>
+          <a href="{{ route('lookbook') }}" class="ink-link mono text-[11px] tracking-[0.25em] text-ink/60 self-center">READ THE LOOKBOOK →</a>
         </div>
       </div>
 

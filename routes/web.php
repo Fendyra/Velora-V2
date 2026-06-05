@@ -21,7 +21,7 @@ Route::get('/auth/google/callback', [AuthController::class, 'handleGoogleCallbac
 Route::get('/', [StorefrontController::class, 'home'])->name('home');
 Route::get('/shop', [StorefrontController::class, 'shop'])->name('shop');
 Route::get('/product/{id}', [StorefrontController::class, 'product'])->name('product');
-Route::get('/logbook', [StorefrontController::class, 'logbook'])->name('logbook');
+Route::get('/lookbook', [StorefrontController::class, 'lookbook'])->name('lookbook');
 Route::get('/checkout', [StorefrontController::class, 'checkout'])->name('checkout');
 Route::post('/checkout/complete', [CheckoutController::class, 'complete'])->name('checkout.complete');
 Route::get('/payment/{order_number}', [StorefrontController::class, 'payment'])->name('payment.page');

@@ -334,19 +334,19 @@ function initColorSwatch() {
   updateSwatch();
 }
 
-function initLogbook() {
-  const root = $('[data-logbook]');
+function initLookbook() {
+  const root = $('[data-lookbook]');
   if (!root) return;
 
   root.addEventListener('click', (e) => {
-    const toggle = e.target.closest('[data-logbook-toggle]');
+    const toggle = e.target.closest('[data-lookbook-toggle]');
     if (!toggle) return;
-    const entry = toggle.closest('[data-logbook-entry]');
+    const entry = toggle.closest('[data-lookbook-entry]');
     if (!entry) return;
 
-    const body = $('[data-logbook-body]', entry);
-    const more = $('[data-logbook-more]', entry);
-    const cta = $('[data-logbook-cta]', entry);
+    const body = $('[data-lookbook-body]', entry);
+    const more = $('[data-lookbook-more]', entry);
+    const cta = $('[data-lookbook-cta]', entry);
     if (!body) return;
 
     const isOpen = !body.classList.contains('hidden');
@@ -458,7 +458,7 @@ onReady(() => {
   initProductForm();
   initColorSwatch();
   initAccordion();
-  initLogbook();
+  initLookbook();
   initFaq();
   initCheckout();
 });

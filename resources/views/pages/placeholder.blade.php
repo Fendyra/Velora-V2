@@ -9,11 +9,11 @@
     {{ $title['big'] }} <span class="italic text-velora">{{ $title['italic'] }}</span>
   </h1>
   <p class="mt-8 max-w-md text-[15px] text-ink/70">
-    This page is being written. In the meantime, head back to the shop, or read the logbook.
+    This page is being written. In the meantime, head back to the shop, or read the lookbook.
   </p>
   <div class="mt-8 flex gap-4">
     <a href="{{ route('shop') }}" class="btn-mag border border-ink px-6 py-3 text-[12px] mono tracking-[0.25em]">SHOP →</a>
-    <a href="{{ route('logbook') }}" class="ink-link mono text-[11px] tracking-[0.25em] text-ink/60 self-center">LOGBOOK →</a>
+    <a href="{{ route('lookbook') }}" class="ink-link mono text-[11px] tracking-[0.25em] text-ink/60 self-center">LOOKBOOK →</a>
   </div>
 </div>
 @endsection

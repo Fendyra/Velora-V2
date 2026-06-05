@@ -43,14 +43,14 @@
         <li><a href="{{ route('shop') }}" class="ink-link">All Pieces</a></li>
         <li><a href="{{ route('shop') }}" class="ink-link">New Arrivals</a></li>
         <li><a href="{{ route('shop') }}" class="ink-link">Drop 002</a></li>
-        <li><a href="{{ route('logbook') }}" class="ink-link">Archive</a></li>
+        <li><a href="{{ route('lookbook') }}" class="ink-link">Archive</a></li>
       </ul>
     </div>
 
     <div class="md:col-span-2 reveal">
       <div class="mono text-[10px] tracking-[0.25em] text-bone/45">/ STUDIO</div>
       <ul class="mt-3 space-y-1.5 text-[13px] text-bone/80">
-        <li><a href="{{ route('logbook') }}" class="ink-link">Logbook</a></li>
+        <li><a href="{{ route('lookbook') }}" class="ink-link">Lookbook</a></li>
         <li><a href="{{ route('atelier') }}" class="ink-link">The Atelier</a></li>
         <li><a href="{{ route('stockists') }}" class="ink-link">Stockists</a></li>
       </ul>

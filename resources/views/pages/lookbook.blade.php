@@ -35,7 +35,7 @@
 
 @extends('layouts.velora')
 
-@section('title', 'Logbook — Velora')
+@section('title', 'Lookbook — Velora')
 
 @section('content')
 <div class="page-enter pt-28 pb-20">
@@ -44,7 +44,7 @@
   <section class="px-6 lg:px-10">
     <div class="grid grid-cols-12 gap-6 items-end">
       <div class="col-span-12 md:col-span-8">
-        <div class="secnum">/ LOGBOOK — DOCUMENTATION</div>
+        <div class="secnum">/ LOOKBOOK — DOCUMENTATION</div>
         <h1 class="display text-[12vw] md:text-[10vw] leading-[0.9] mt-3">
           The <span class="italic text-velora">studio,</span><br />
           <span>in its own words.</span>
@@ -70,7 +70,7 @@
 
 
   {{-- ─── LOOKBOOK GRID ───────────────────────────────────── --}}
-  <section class="mt-10" id="logbook-grid">
+  <section class="mt-10" id="lookbook-grid">
     @php
     // Structured lookbook grid — each cell has a fixed role
     $grid = [
@@ -89,7 +89,7 @@
       ['src'=>'/assets/images/home/landingpage/privilage.jpg', 'tag'=>'STUDIO',  'title'=>'Studio Reference',          'span'=>'normal'],
       ['src'=>'/assets/images/products/product3.png',          'tag'=>'DROP',    'title'=>'Quiet Riot — Product',      'span'=>'wide-right'],
     ];
-    // Merge logbook entry images first
+    // Merge lookbook entry images first
     $galleryAll = [];
     foreach ($entries as $e) {
       $galleryAll[] = ['src'=>$e['image'],'tag'=>$e['tag'],'title'=>$e['title'],'excerpt'=>$e['excerpt'],'date'=>$e['date']];
@@ -100,7 +100,7 @@
     {{-- Row 1: [wide 2/3] + [square 1/3] --}}
     <div class="grid grid-cols-3 gap-1 mb-1">
       @php $r1 = array_slice($galleryAll, 0, 2); @endphp
-      <div class="col-span-2 relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="col-span-2 relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $r1[0]['src'] }}" data-title="{{ $r1[0]['title'] }}" data-tag="{{ $r1[0]['tag'] }}" data-excerpt="{{ $r1[0]['excerpt'] ?? '' }}" data-date="{{ $r1[0]['date'] ?? '' }}">
         <div class="aspect-[16/9] overflow-hidden">
           <img src="{{ $r1[0]['src'] }}" alt="{{ $r1[0]['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="col-span-1 relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="col-span-1 relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $r1[1]['src'] }}" data-title="{{ $r1[1]['title'] }}" data-tag="{{ $r1[1]['tag'] }}" data-excerpt="{{ $r1[1]['excerpt'] ?? '' }}" data-date="{{ $r1[1]['date'] ?? '' }}">
         <div class="aspect-[16/9] overflow-hidden">
           <img src="{{ $r1[1]['src'] }}" alt="{{ $r1[1]['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -130,7 +130,7 @@
     <div class="grid grid-cols-3 gap-1 mb-1">
       @php $r2 = array_slice($galleryAll, 2, 3); @endphp
       @foreach ($r2 as $img)
-      <div class="relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $img['src'] }}" data-title="{{ $img['title'] }}" data-tag="{{ $img['tag'] }}" data-excerpt="{{ $img['excerpt'] ?? '' }}" data-date="{{ $img['date'] ?? '' }}">
         <div class="aspect-[4/3] overflow-hidden">
           <img src="{{ $img['src'] }}" alt="{{ $img['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -149,7 +149,7 @@
     <div class="grid grid-cols-3 gap-1 mb-1">
       @php $r3 = array_slice($galleryAll, 5, 3); @endphp
       @foreach ($r3 as $img)
-      <div class="relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $img['src'] }}" data-title="{{ $img['title'] }}" data-tag="{{ $img['tag'] }}" data-excerpt="{{ $img['excerpt'] ?? '' }}" data-date="{{ $img['date'] ?? '' }}">
         <div class="aspect-[4/3] overflow-hidden">
           <img src="{{ $img['src'] }}" alt="{{ $img['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -167,7 +167,7 @@
     {{-- Row 4: [1/3] + [2/3 wide] --}}
     <div class="grid grid-cols-3 gap-1">
       @php $r4 = array_slice($galleryAll, 8, 2); @endphp
-      <div class="col-span-1 relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="col-span-1 relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $r4[0]['src'] }}" data-title="{{ $r4[0]['title'] }}" data-tag="{{ $r4[0]['tag'] }}" data-excerpt="{{ $r4[0]['excerpt'] ?? '' }}" data-date="{{ $r4[0]['date'] ?? '' }}">
         <div class="aspect-[4/3] overflow-hidden">
           <img src="{{ $r4[0]['src'] }}" alt="{{ $r4[0]['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -180,7 +180,7 @@
         </div>
       </div>
       @if (isset($r4[1]))
-      <div class="col-span-2 relative overflow-hidden cursor-zoom-in group logbook-tile"
+      <div class="col-span-2 relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $r4[1]['src'] }}" data-title="{{ $r4[1]['title'] }}" data-tag="{{ $r4[1]['tag'] }}" data-excerpt="{{ $r4[1]['excerpt'] ?? '' }}" data-date="{{ $r4[1]['date'] ?? '' }}">
         <div class="aspect-[4/3] overflow-hidden">
           <img src="{{ $r4[1]['src'] }}" alt="{{ $r4[1]['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -228,14 +228,14 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // ─── Logbook accordion ─────────────────────────────────────────
-  document.querySelector('[data-logbook]')?.addEventListener('click', e => {
-    const toggle = e.target.closest('[data-logbook-toggle]');
+  // ─── Lookbook accordion ─────────────────────────────────────────
+  document.querySelector('[data-lookbook]')?.addEventListener('click', e => {
+    const toggle = e.target.closest('[data-lookbook-toggle]');
     if (!toggle) return;
-    const entry = toggle.closest('[data-logbook-entry]');
+    const entry = toggle.closest('[data-lookbook-entry]');
     if (!entry) return;
-    const body = entry.querySelector('[data-logbook-body]');
-    const cta  = entry.querySelector('[data-logbook-cta]');
+    const body = entry.querySelector('[data-lookbook-body]');
+    const cta  = entry.querySelector('[data-lookbook-cta]');
     if (!body) return;
     const isOpen = !body.classList.contains('hidden');
     body.classList.toggle('hidden', isOpen);
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ─── Lightbox ──────────────────────────────────────────────────
-  const tiles = Array.from(document.querySelectorAll('.logbook-tile'));
+  const tiles = Array.from(document.querySelectorAll('.lookbook-tile'));
   const overlay = document.getElementById('lb-overlay');
   const lbImg   = document.getElementById('lb-img');
   const lbTag   = document.getElementById('lb-tag');

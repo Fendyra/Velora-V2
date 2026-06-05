@@ -61,7 +61,7 @@ final class VeloraCatalog
     }
 
     /** @return array<int, array{id:string,date:string,tag:string,title:string,excerpt:string,image:string}> */
-    public static function logbook(): array
+    public static function lookbook(): array
     {
         return [
             [
@@ -120,7 +120,7 @@ final class VeloraCatalog
     {
         return [
             ['label' => 'Shop', 'route' => 'shop'],
-            ['label' => 'Logbook', 'route' => 'logbook'],
+            ['label' => 'Lookbook', 'route' => 'lookbook'],
             ['label' => 'Atelier', 'route' => 'atelier'],
             ['label' => 'Stockists', 'route' => 'stockists'],
         ];

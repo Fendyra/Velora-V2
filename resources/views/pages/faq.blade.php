@@ -30,8 +30,8 @@
     ],
     'Studio' => [
       ['q' => 'Can I visit the atelier?', 'a' => 'Yes, by appointment. Jl. Seturan Raya 10, Yogyakarta. Monday to Saturday, 11.00 to 17.00 WIB. Write to us with a date and we will set the kettle on.'],
-      ['q' => 'Are you hiring?', 'a' => 'Quietly. We open one role a year and write to it on the logbook. Read it and send a note if anything fits.'],
-      ['q' => 'Do you collaborate?', 'a' => 'Rarely. Once or twice a year, with people whose work we already wear. The best route in is the logbook, then a short, specific email.'],
+      ['q' => 'Are you hiring?', 'a' => 'Quietly. We open one role a year and write to it on the lookbook. Read it and send a note if anything fits.'],
+      ['q' => 'Do you collaborate?', 'a' => 'Rarely. Once or twice a year, with people whose work we already wear. The best route in is the lookbook, then a short, specific email.'],
     ],
   ];
 
@@ -115,7 +115,7 @@
         <p class="text-[13px] text-ink/65">No bots, no templates. The studio writes back within one business day, often the same morning.</p>
         <div class="mt-4 flex gap-3 flex-wrap">
           <a href="mailto:hello.velorastudio19@gmail.com" class="btn-mag border border-ink px-5 py-3 text-[12px] mono tracking-[0.25em]">EMAIL US →</a>
-          <a href="{{ route('logbook') }}" class="ink-link self-center mono text-[11px] tracking-[0.25em] text-ink/60">READ THE LOGBOOK →</a>
+          <a href="{{ route('lookbook') }}" class="ink-link self-center mono text-[11px] tracking-[0.25em] text-ink/60">READ THE LOOKBOOK →</a>
         </div>
       </div>
     </div>

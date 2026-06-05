@@ -91,15 +91,15 @@ final class StorefrontController
         ]);
     }
 
-    public function logbook(Request $request)
+    public function lookbook(Request $request)
     {
-        $all = VeloraCatalog::logbook();
+        $all = VeloraCatalog::lookbook();
         $tag = (string) $request->query('tag', 'All');
 
         $tags = ['All', ...array_values(array_unique(array_map(fn (array $e) => $e['tag'], $all)))];
         $entries = $tag === 'All' ? $all : array_values(array_filter($all, fn (array $e) => $e['tag'] === $tag));
 
-        return view('pages.logbook', [
+        return view('pages.lookbook', [
             'tag' => $tag,
             'tags' => $tags,
             'entries' => $entries,
