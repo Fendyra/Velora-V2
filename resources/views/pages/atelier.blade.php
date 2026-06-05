@@ -128,10 +128,10 @@
     <div style="border-top: 1px solid rgba(0,0,0,0.12);">
       @php
         $steps = [
-          ['n'=>'01','title'=>'Pattern & Cut','img'=>'home/landingpage/model2.jpg','body'=>'Every silhouette is drafted on paper in our studio. We cut heavy cottons in small stacks to ensure absolute precision on every single panel.'],
-          ['n'=>'02','title'=>'Sew & Reinforce','img'=>'about/about2.png','body'=>'Assembled by our senior machinists using twin-needle stitching on all high-stress seams. Necklines are bound so they never lose their shape.'],
-          ['n'=>'03','title'=>'Garment Dye','img'=>'products/product8.png','body'=>'We sew the garments first in raw cotton, then dye them whole. This shrinks each piece to its final size and creates our signature washed patina.'],
-          ['n'=>'04','title'=>'Serialise & Ship','img'=>'products/product5.png','body'=>'Every finished piece receives a unique serial number stitched at the hem before being wrapped and dispatched each Thursday from our atelier.'],
+          ['n'=>'01','title'=>'Pattern & Cut','img'=>'atelier/pattern.png','body'=>'Every silhouette is drafted on paper in our studio. We cut heavy cottons in small stacks to ensure absolute precision on every single panel.'],
+          ['n'=>'02','title'=>'Sew & Reinforce','img'=>'atelier/sew.png','body'=>'Assembled by our senior machinists using twin-needle stitching on all high-stress seams. Necklines are bound so they never lose their shape.'],
+          ['n'=>'03','title'=>'Garment Dye','img'=>'atelier/garment.png','body'=>'We sew the garments first in raw cotton, then dye them whole. This shrinks each piece to its final size and creates our signature washed patina.'],
+          ['n'=>'04','title'=>'Serialise & Ship','img'=>'atelier/ship.png','body'=>'Every finished piece receives a unique serial number stitched at the hem before being wrapped and dispatched each Thursday from our atelier.'],
         ];
       @endphp
       @foreach ($steps as $s)
