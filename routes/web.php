@@ -22,10 +22,6 @@ Route::get('/', [StorefrontController::class, 'home'])->name('home');
 Route::get('/shop', [StorefrontController::class, 'shop'])->name('shop');
 Route::get('/product/{id}', [StorefrontController::class, 'product'])->name('product');
 Route::get('/lookbook', [StorefrontController::class, 'lookbook'])->name('lookbook');
-Route::get('/checkout', [StorefrontController::class, 'checkout'])->name('checkout');
-Route::post('/checkout/complete', [CheckoutController::class, 'complete'])->name('checkout.complete');
-Route::get('/payment/{order_number}', [StorefrontController::class, 'payment'])->name('payment.page');
-Route::post('/payment/{order_number}/cancel', [StorefrontController::class, 'cancelPayment'])->name('payment.cancel');
 Route::get('/success', [StorefrontController::class, 'success'])->name('success');
 Route::get('/faq', [StorefrontController::class, 'faq'])->name('faq');
 Route::get('/terms', [StorefrontController::class, 'terms'])->name('terms');
@@ -39,6 +35,12 @@ Route::post('/subscribe', [StorefrontController::class, 'subscribe'])->name('new
 Route::middleware(['auth'])->group(function () {
     Route::get('/account', [AuthController::class, 'account'])->name('account');
     Route::post('/account/password', [AuthController::class, 'updatePassword'])->name('account.password.update');
+    
+    // Checkout & Payment
+    Route::get('/checkout', [StorefrontController::class, 'checkout'])->name('checkout');
+    Route::post('/checkout/complete', [CheckoutController::class, 'complete'])->name('checkout.complete');
+    Route::get('/payment/{order_number}', [StorefrontController::class, 'payment'])->name('payment.page');
+    Route::post('/payment/{order_number}/cancel', [StorefrontController::class, 'cancelPayment'])->name('payment.cancel');
 });
 
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');

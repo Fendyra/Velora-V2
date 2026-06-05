@@ -33,7 +33,7 @@
   {{-- ─── HERO IMAGE ──────────────────────────────────────── --}}
   <div class="mt-10 mb-24">
     <div class="w-full overflow-hidden" style="aspect-ratio:16/6;">
-      <img src="{{ asset('assets/images/atelier/atelier-footage.jpg') }}" alt="Velora Atelier"
+      <img src="{{ asset('assets/images/atelier/atelier-footage.png') }}" alt="Velora Atelier"
            class="w-full h-full object-cover object-center" />
     </div>
   </div>
