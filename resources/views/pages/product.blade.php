@@ -52,7 +52,7 @@
 
     <div class="col-span-12 lg:col-span-5 lg:pl-8 lg:sticky lg:top-24 self-start">
       <div class="mono text-[10px] tracking-[0.25em] text-ink/50 reveal">{{ strtoupper($p['collection']) }} · {{ $p['id'] }}</div>
-      <h1 class="display text-[7vw] lg:text-[4vw] leading-none mt-3 reveal-up-clip">{{ $p['name'] }}</h1>
+      <h1 class="display text-[7vw] lg:text-[4vw] leading-none mt-3 reveal text-velora">{{ $p['name'] }}</h1>
       <div class="mt-4 flex items-baseline gap-3 reveal">
         <div class="display text-[28px]">{{ VeloraCatalog::fmtIDR((int) $p['price']) }}</div>
         <span class="mono text-[11px] tracking-[0.25em] text-ink/50">VAT incl.</span>
