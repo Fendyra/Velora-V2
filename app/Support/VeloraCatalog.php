@@ -14,10 +14,24 @@ final class VeloraCatalog
             $data['id'] = $product->sku;
             
             // Format Image URL appropriately
-            if (!empty($product->image)) {
+            if (!empty($product->image) && !str_starts_with($product->image, '/assets')) {
                 $data['image'] = \Illuminate\Support\Facades\Storage::url($product->image);
+            } elseif (!empty($product->image)) {
+                $data['image'] = $product->image;
             } else {
                 $data['image'] = '/assets/images/products/product1.png'; // Fallback
+            }
+
+            if ($data['id'] === 'V04') {
+                $data['image'] = '/assets/images/products/product1-front.png';
+            } elseif ($data['id'] === 'V05') {
+                $data['image'] = '/assets/images/products/product2-front.png';
+            } elseif ($data['id'] === 'V06') {
+                $data['image'] = '/assets/images/products/product3-front.png';
+            } elseif ($data['id'] === 'V10') {
+                $data['image'] = '/assets/images/products/product4-front.png';
+            } elseif ($data['id'] === 'V12') {
+                $data['image'] = '/assets/images/products/product5-front.png';
             }
             // Fallbacks for new dynamic fields
             $data['description'] = $product->description ?? 'Cut in heavyweight Indonesian cotton, finished by hand at our atelier in Bandung. Garment-dyed for a softened patina that deepens with wear.';
