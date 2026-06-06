@@ -1,7 +1,23 @@
 @php
   use App\Support\VeloraCatalog;
   $p = $product;
-  $galleryImgs = [$p['image'], '/assets/images/home/landingpage/model2.jpg', '/assets/images/home/landingpage/model3.jpg', '/assets/images/about/about2.png'];
+  
+  if ($p['id'] === 'V04') {
+      $galleryImgs = [
+          '/assets/images/products/product1-front.png',
+          '/assets/images/products/product1-back.png',
+          '/assets/images/products/product1-mockup1.png',
+          '/assets/images/products/product1-mockup2.png',
+      ];
+  } else {
+      $galleryImgs = [
+          $p['image'], 
+          '/assets/images/home/landingpage/model2.jpg', 
+          '/assets/images/home/landingpage/model3.jpg', 
+          '/assets/images/atelier/pattern.png'
+      ];
+  }
+
   $allSizes = ['XS', 'S', 'M', 'L', 'XL'];
   $colorSwatch = ['Bone' => '#F1ECE2', 'Ink' => '#0B0B10', 'Sand' => '#C9BFA8'];
 @endphp
@@ -23,7 +39,7 @@
   <div class="grid grid-cols-12 gap-6 px-6 lg:px-10 mt-8">
     <div class="col-span-12 lg:col-span-7">
       <div class="grid grid-cols-12 gap-3">
-        <script type="application/json" data-gallery-images>{{ json_encode($galleryImgs) }}</script>
+        <script type="application/json" data-gallery-images>{!! json_encode($galleryImgs) !!}</script>
         <div class="col-span-12 md:col-span-2 order-2 md:order-1">
           <div class="flex md:flex-col gap-2 overflow-x-auto no-scrollbar md:max-h-[80vh]">
             @foreach ($galleryImgs as $i => $img)
