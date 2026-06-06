@@ -28,9 +28,9 @@ final class VeloraCatalog
                 $data['image'] = '/assets/images/products/product2-front.png';
             } elseif ($data['id'] === 'V06') {
                 $data['image'] = '/assets/images/products/product3-front.png';
-            } elseif ($data['id'] === 'V10') {
+            } elseif ($data['id'] === 'V07') {
                 $data['image'] = '/assets/images/products/product4-front.png';
-            } elseif ($data['id'] === 'V12') {
+            } elseif ($data['id'] === 'V08') {
                 $data['image'] = '/assets/images/products/product5-front.png';
             }
             // Fallbacks for new dynamic fields

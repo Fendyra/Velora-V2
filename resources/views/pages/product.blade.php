@@ -23,14 +23,14 @@
           '/assets/images/products/product3-mockup2.png',
           '/assets/images/products/product3-mockup3.png',
       ];
-    } elseif ($p['id'] === 'V10') {
+    } elseif ($p['id'] === 'V07') {
       $galleryImgs = [
           '/assets/images/products/product4-front.png',
           '/assets/images/products/product4-back.png',
           '/assets/images/products/product4-mockup1.png',
           '/assets/images/products/product4-mockup2.png',
       ];
-    } elseif ($p['id'] === 'V12') {
+    } elseif ($p['id'] === 'V08') {
       $galleryImgs = [
           '/assets/images/products/product5-front.png',
           '/assets/images/products/product5-back.png',
