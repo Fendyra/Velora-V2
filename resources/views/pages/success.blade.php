@@ -17,22 +17,7 @@
 @section('content')
 <div class="page-enter pt-28 pb-28 relative overflow-hidden" data-reveal-scope>
 
-  {{-- Confetti --}}
-  <div class="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-    @php
-      $confettiColors = ['#0014FF', '#0B0B10', '#C9BFA8', '#F1ECE2', '#0014FF'];
-    @endphp
-    @for ($i = 0; $i < 36; $i++)
-      <span class="confetti" style="
-        left: {{ rand(0, 100) }}%;
-        animation-delay: {{ rand(0, 2000) }}ms;
-        animation-duration: {{ rand(3000, 6000) }}ms;
-        background: {{ $confettiColors[$i % 5] }};
-        width: {{ rand(6, 14) }}px;
-        height: {{ rand(12, 22) }}px;
-      "></span>
-    @endfor
-  </div>
+
 
   <div class="px-6 lg:px-10">
     <div class="secnum reveal">/ ORDER CONFIRMED</div>
