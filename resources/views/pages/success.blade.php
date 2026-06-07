@@ -85,7 +85,7 @@
       {{-- Image card --}}
       <div class="col-span-12 lg:col-span-5 reveal">
         <div class="aspect-[4/5] img-zoom overflow-hidden relative">
-          <img src="/assets/images/lookbook/lookbook10.png" class="w-full h-full object-cover" />
+          <img src="/assets/images/payment/success.png" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
           <div class="absolute left-5 bottom-5 right-5 text-bone">
             <div class="mono text-[10px] tracking-[0.25em] opacity-75">/ A NOTE FROM THE STUDIO</div>
