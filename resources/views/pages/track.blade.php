@@ -18,20 +18,18 @@
 
 @extends('layouts.velora')
 
-@section('title', 'Order Confirmed — Velora')
+@section('title', 'Order Tracking — Velora')
 
 @section('content')
 <div class="page-enter pt-28 pb-28 relative overflow-hidden" data-reveal-scope>
 
-
-
   <div class="px-6 lg:px-10">
-    <div class="secnum reveal">/ ORDER CONFIRMED</div>
-    <h1 class="display text-[16vw] md:text-[10vw] leading-[0.9] mt-4 reveal-up-clip">
-      Thank you. <span class="italic text-velora">Quietly.</span>
+    <div class="secnum reveal">/ ORDER TRACKING</div>
+    <h1 class="display text-[12vw] md:text-[8vw] leading-[0.9] mt-4 reveal-up-clip">
+      Track your <span class="italic text-velora">order.</span>
     </h1>
     <p class="mt-6 text-[15px] leading-relaxed text-ink/75 max-w-lg reveal">
-      Order <span class="mono">{{ $orderId }}</span> has been received at the studio. You will hear from us on Thursday, when the box leaves Yogyakarata — and again when it lands.
+      Follow the journey of your order <span class="mono">{{ $order->order_number }}</span>. We'll update the status as it progresses.
     </p>
 
     <div class="mt-12 grid grid-cols-12 gap-6">
@@ -41,7 +39,7 @@
           <div class="flex items-start justify-between gap-4">
             <div>
               <div class="mono text-[10px] tracking-[0.25em] text-ink/60">/ ORDER</div>
-              <div class="display text-[36px] leading-none mt-2">{{ $orderId }}</div>
+              <div class="display text-[36px] leading-none mt-2">{{ $order->order_number }}</div>
             </div>
             <div class="w-14 h-14 rounded-full bg-velora text-bone grid place-items-center shrink-0">
               <svg class="tick" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="m4 12 5 5L20 6"/></svg>
@@ -49,7 +47,7 @@
           </div>
           <div class="mt-8 grid grid-cols-2 gap-y-4 text-[13px]">
             <div class="text-ink/55">Paid</div>
-            <div class="mono text-right">{{ VeloraCatalog::fmtIDR($total) }}</div>
+            <div class="mono text-right">{{ VeloraCatalog::fmtIDR($order->total_amount) }}</div>
             <div class="text-ink/55">Method</div>
             <div class="mono text-right">VISA •••• 4242</div>
             <div class="text-ink/55">Dispatch</div>

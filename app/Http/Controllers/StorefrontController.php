@@ -152,11 +152,25 @@ final class StorefrontController
     public function success(Request $request)
     {
         $orderId = (string) $request->query('orderId', session()->get('velora.lastOrderId', 'VL-000000'));
-        $total = (int) $request->query('total', session()->get('velora.lastOrderTotal', 0));
+        $order = \App\Models\Order::where('order_number', $orderId)->first();
+        
+        $total = $order ? $order->total_amount : (int) $request->query('total', session()->get('velora.lastOrderTotal', 0));
 
         return view('pages.success', [
+            'order' => $order,
             'orderId' => $orderId,
             'total' => $total,
+        ]);
+    }
+
+    public function trackOrder($order_number)
+    {
+        $order = \App\Models\Order::where('order_number', $order_number)
+                    ->where('user_id', \Illuminate\Support\Facades\Auth::id())
+                    ->firstOrFail();
+
+        return view('pages.track', [
+            'order' => $order,
         ]);
     }
 

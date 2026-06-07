@@ -34,6 +34,7 @@ Route::post('/subscribe', [StorefrontController::class, 'subscribe'])->name('new
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/account', [AuthController::class, 'account'])->name('account');
+    Route::get('/account/orders/{order_number}', [StorefrontController::class, 'trackOrder'])->name('account.order');
     Route::post('/account/password', [AuthController::class, 'updatePassword'])->name('account.password.update');
     
     // Checkout & Payment

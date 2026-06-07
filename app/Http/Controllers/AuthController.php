@@ -77,8 +77,12 @@ class AuthController extends Controller
 
     public function account()
     {
+        $user = Auth::user();
+        $orders = \App\Models\Order::where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
+
         return view('pages.account', [
-            'user' => Auth::user(),
+            'user' => $user,
+            'orders' => $orders,
         ]);
     }
 

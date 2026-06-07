@@ -39,6 +39,28 @@
             </button>
           </form>
         </div>
+
+        <div class="mt-16">
+          <h2 class="mono text-[12px] tracking-[0.25em] mb-6">/ ORDER HISTORY</h2>
+          @if($orders->isEmpty())
+            <p class="text-[14px] text-ink/60 italic">You haven't placed any orders yet.</p>
+          @else
+            <div class="space-y-4">
+              @foreach($orders as $order)
+                <div class="border border-ink/10 p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-ink/30 transition-colors">
+                  <div>
+                    <div class="mono text-[12px] font-medium">{{ $order->order_number }}</div>
+                    <div class="text-[12px] text-ink/60 mt-1">{{ $order->created_at->format('d M Y') }} · {{ \App\Support\VeloraCatalog::fmtIDR($order->total_amount) }}</div>
+                  </div>
+                  <div>
+                    <span class="inline-block px-2 py-1 text-[10px] mono tracking-widest uppercase border border-ink/10 bg-ink/5 rounded-sm {{ $order->status === 'cancelled' ? 'text-red-600' : '' }}">{{ $order->status }}</span>
+                    <a href="{{ route('account.order', $order->order_number) }}" class="ml-3 ink-link mono text-[10px] tracking-[0.25em] text-ink/60 hover:text-velora">TRACK →</a>
+                  </div>
+                </div>
+              @endforeach
+            </div>
+          @endif
+        </div>
       </div>
 
       <!-- Security / Change Password -->
