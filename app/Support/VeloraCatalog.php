@@ -137,19 +137,27 @@ final class VeloraCatalog
             [
                 'id' => 'L008',
                 'date' => '01.01.26',
-                'tag' => 'FIELD',
-                'title' => 'Atelier, Yogyakarta.',
-                'excerpt' => 'Nestled in the city where Velora began, our space brings together community, craftsmanship, and contemporary dressing.',
+                'tag' => 'DROP',
+                'title' => 'The Shape of Everyday',
+                'excerpt' => 'Designed to move through shifting routines with quiet confidence. Familiar in function, refined through proportion, detail, and intent.',
                 'image' => '/assets/images/lookbook/lookbook8.png',
             ],
             [
                 'id' => 'L009',
                 'date' => '01.01.26',
-                'tag' => 'FIELD',
-                'title' => 'Atelier, Yogyakarta.',
-                'excerpt' => 'Nestled in the city where Velora began, our space brings together community, craftsmanship, and contemporary dressing.',
+                'tag' => 'DROP',
+                'title' => 'Afterhours Uniform',
+                'excerpt' => 'Built for the moments between destinations. Relaxed silhouettes and tonal details define a new kind of everyday essential.',
                 'image' => '/assets/images/lookbook/lookbook9.png',
             ],
+            [
+                'id' => 'L010',
+                'date' => '01.01.26',
+                'tag' => 'EDITORIAL',
+                'title' => 'The Quiet Statement',
+                'excerpt' => 'Not designed to demand attention, but to hold it. A contemporary outerwear piece shaped through subtle contrasts and considered craftsmanship.',
+                'image' => '/assets/images/lookbook/lookbook10.png',
+            ]
         ];
     }
 
