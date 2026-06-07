@@ -11,10 +11,11 @@
       <h1 class="display text-[14vw] md:text-[8vw] leading-[0.9] mt-3">
         We respect your <br><span class="italic text-velora">digital space.</span>
       </h1>
+      <div class="mono text-[10px] tracking-[0.25em] text-ink/50 mt-6">/ LAST UPDATED: 02 JUNE 2026</div>
     </div>
     <div class="col-span-12 md:col-span-4 mb-2">
       <p class="text-[13px] text-ink/70 max-w-sm">
-        We believe that privacy is not a feature, but a fundamental right. We collect only what is strictly necessary to deliver our garments to your door. No excessive tracking, no sold data.
+        Velora is fully committed to protecting the privacy and security of your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when using the Velora e-commerce platform.
       </p>
     </div>
   </div>
@@ -52,18 +53,18 @@
         <div class="bg-ivory p-8 md:p-12 border border-ink/10 h-full flex flex-col">
           <h2 class="display text-[32px] md:text-[42px] leading-none mb-6">Information Collection</h2>
           <div class="text-[14px] text-ink/80 leading-relaxed max-w-2xl space-y-4">
-            <p>When you interact with our storefront, we collect information transparently and only with your consent:</p>
+            <p>When you interact with Velora services, we collect the following types of information:</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div class="p-5 border border-ink/10 bg-white">
-                <div class="mono text-[10px] tracking-widest text-velora mb-2">/ IDENTITY & CONTACT</div>
-                <p class="text-[13px]">Name, email address, phone number (used exclusively for shipping updates and order confirmation).</p>
+                <div class="mono text-[10px] tracking-widest text-velora mb-2">/ ACCOUNT & PROFILE DATA</div>
+                <p class="text-[13px]">Full name and email address obtained automatically when you register or log in using the Google account authentication feature (Single Sign-On).</p>
               </div>
               <div class="p-5 border border-ink/10 bg-white">
-                <div class="mono text-[10px] tracking-widest text-velora mb-2">/ SHIPPING DATA</div>
-                <p class="text-[13px]">Delivery address and postal code to ensure your garments reach you safely.</p>
+                <div class="mono text-[10px] tracking-widest text-velora mb-2">/ TRANSACTION & SHIPPING DATA</div>
+                <p class="text-[13px]">Shipping address, phone number, and order details of the clothing products you purchase through our platform.</p>
               </div>
             </div>
-            <p class="pt-4 border-t border-ink/10 mt-6">We also collect basic technical data (like IP address) to ensure our website functions securely.</p>
+            <p class="pt-4 border-t border-ink/10 mt-6"><strong>Technical & Tracking Data:</strong> IP address, browser type, device used, and interaction history (such as clicks, products viewed, and visit duration) recorded automatically through third-party analytics services (Google Analytics).</p>
           </div>
         </div>
       </div>
@@ -73,25 +74,36 @@
         <div class="bg-ivory p-8 md:p-12 border border-ink/10 h-full flex flex-col">
           <h2 class="display text-[32px] md:text-[42px] leading-none mb-6">Processing & Usage</h2>
           <div class="text-[14px] text-ink/80 leading-relaxed max-w-2xl space-y-4">
-            <p>Your data is processed strictly for fulfilling our obligations to you. We do not engage in behavioral advertising or third-party data brokering.</p>
+            <p>The collected data is used solely for the operational and development purposes of the platform, including:</p>
             <ul class="space-y-4 mt-6">
               <li class="flex gap-4 items-start">
                 <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
-                <div>
-                  <strong>Order Fulfillment:</strong> Passing your address and contact details to our trusted courier partners (e.g., JNE, Paxel, DHL) for dispatch.
-                </div>
+                <div>Processing orders, verifying payment status, and arranging the delivery of goods to your address.</div>
               </li>
               <li class="flex gap-4 items-start">
                 <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
-                <div>
-                  <strong>Payment Processing:</strong> Payments are processed securely via Midtrans. We never store or see your full credit card details.
-                </div>
+                <div>Providing quick, efficient, and secure login access without requiring manual password creation.</div>
               </li>
               <li class="flex gap-4 items-start">
                 <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
-                <div>
-                  <strong>Communication:</strong> Sending you our monthly letter, only if you have explicitly opted in.
-                </div>
+                <div>Analyzing visitor behavior to improve the website interface, catalog layout, and Velora's fashion product marketing strategies.</div>
+              </li>
+              <li class="flex gap-4 items-start">
+                <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
+                <div>Preventing fraudulent activities, maintaining website system security, and complying with applicable legal obligations.</div>
+              </li>
+            </ul>
+
+            <h3 class="font-bold text-[16px] mt-8 mb-2">Data Sharing with Third Parties</h3>
+            <p>Velora does not sell or rent your personal data. However, to ensure the system runs as intended, we share specific data with the following third-party services:</p>
+            <ul class="space-y-4 mt-4">
+              <li class="flex gap-4 items-start">
+                <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
+                <div><strong>Google (OAuth & Analytics):</strong> To manage third-party login access and process aggregate visit analytics without revealing individual identities directly.</div>
+              </li>
+              <li class="flex gap-4 items-start">
+                <div class="w-1.5 h-1.5 rounded-full bg-velora mt-2 shrink-0"></div>
+                <div><strong>Payment Gateways (Midtrans/Xendit):</strong> We send billing details (such as name, email, and payment amount) to the payment gateway system to process billing creation (Virtual Account or other methods). Velora never stores users' bank account or credit/debit card numbers on our servers.</div>
               </li>
             </ul>
           </div>
@@ -101,21 +113,13 @@
       <!-- Panel 3 -->
       <div id="panel-3" class="privacy-panel transition-all duration-500 opacity-0 translate-y-8 pointer-events-none z-0" style="grid-area: 1 / 1;">
         <div class="bg-ivory p-8 md:p-12 border border-ink/10 h-full flex flex-col">
-          <h2 class="display text-[32px] md:text-[42px] leading-none mb-6">Security & Protection</h2>
+          <h2 class="display text-[32px] md:text-[42px] leading-none mb-6">Storage & Security</h2>
           <div class="text-[14px] text-ink/80 leading-relaxed max-w-2xl space-y-4">
-            <p>We treat your personal information with the same care as our own garments. Our security measures include:</p>
+            <p>All user operational data is stored centrally in our Virtual Private Server (VPS).</p>
             <div class="bg-white text-bone p-6 mt-6 space-y-4">
               <div class="border-b border-bone/20 pb-4">
-                <div class="mono text-[10px] tracking-widest text-velora mb-1">ENCRYPTION</div>
-                <p class="text-[13px] text-ink/80">All traffic between you and our servers is encrypted using industry-standard TLS (Transport Layer Security).</p>
-              </div>
-              <div class="border-b border-bone/20 pb-4">
-                <div class="mono text-[10px] tracking-widest text-velora mb-1">ACCESS CONTROL</div>
-                <p class="text-[13px] text-ink/80">Only authorized core staff at the Velora atelier have access to customer data, strictly on a need-to-know basis.</p>
-              </div>
-              <div>
-                <div class="mono text-[10px] tracking-widest text-velora mb-1">DATA RETENTION</div>
-                <p class="text-[13px] text-ink/80">We retain your order history for accounting purposes, but guest checkout data is minimized after 6 months.</p>
+                <div class="mono text-[10px] tracking-widest text-velora mb-1">ENCRYPTION PROTOCOLS</div>
+                <p class="text-[13px] text-ink/80">We implement SSL/HTTPS security encryption protocols to ensure that data transmission between the device you use and the Velora server system runs securely and is protected from interception by unauthorized parties.</p>
               </div>
             </div>
           </div>
@@ -127,21 +131,24 @@
         <div class="bg-ivory p-8 md:p-12 border border-ink/10 h-full flex flex-col">
           <h2 class="display text-[32px] md:text-[42px] leading-none mb-6">Your Rights</h2>
           <div class="text-[14px] text-ink/80 leading-relaxed max-w-2xl space-y-4">
-            <p>You remain the sole owner of your data. Under applicable privacy laws, you possess the right to:</p>
+            <p>As a user of the Velora platform, you have the right to:</p>
             <div class="flex flex-col gap-3 mt-6">
               <div class="flex items-center gap-4 p-4 border border-ink/10 bg-white">
                 <div class="text-velora"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
-                <div><strong>Access & Portability:</strong> Request a copy of your personal data.</div>
+                <div>Request a copy of your personal data stored in our system.</div>
               </div>
               <div class="flex items-center gap-4 p-4 border border-ink/10 bg-white">
                 <div class="text-velora"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
-                <div><strong>Correction:</strong> Request corrections to inaccurate information.</div>
+                <div>Update your shipping address or contact information at any time through your profile dashboard.</div>
               </div>
               <div class="flex items-center gap-4 p-4 border border-ink/10 bg-white">
                 <div class="text-velora"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></div>
-                <div><strong>Erasure:</strong> Request permanent deletion of your data.</div>
+                <div>Request deletion of your account and order history data from Velora's database by contacting our support service.</div>
               </div>
             </div>
+
+            <h3 class="font-bold text-[16px] mt-8 mb-2">Changes to Privacy Policy</h3>
+            <p>Velora reserves the right to update this Privacy Policy from time to time to adapt to operational or regulatory changes. Any changes will be informed on this page along with an updated revision date at the top of the document.</p>
           </div>
         </div>
       </div>
