@@ -151,7 +151,7 @@
 
   <div class="mt-32 border-t border-ink/15 pt-8 text-center">
     <div class="mono text-[11px] tracking-[0.25em] text-ink/50 mb-4">/ EXERCISE YOUR RIGHTS</div>
-    <a href="mailto:hello.velorastudio19@gmail.com" class="display italic text-[32px] hover:text-velora transition-colors">support@velora.studio</a>
+    <a href="mailto:hello.velorastudio19@gmail.com" class="display italic text-[32px] hover:text-velora transition-colors">hello.velorastudio19@gmail.com</a>
   </div>
 </div>
 
