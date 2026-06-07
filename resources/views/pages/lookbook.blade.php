@@ -82,7 +82,7 @@
       ['src'=>'/assets/images/home/landingpage/model3.jpg',    'tag'=>'FIELD',   'title'=>'Raw Footage — Yogya'],
       ['src'=>'/assets/images/home/landingpage/model4.png',    'tag'=>'DROP',    'title'=>'Busy Weekends — SS26'],
       // Row 3: 3 equal
-      ['src'=>'/assets/images/home/landingpage/model1.jpg',    'tag'=>'PROCESS', 'title'=>'Cutting Room, 2026'],
+      ['src'=>'/assets/images/lookbook/lookbook1.png',    'tag'=>'PROCESS', 'title'=>'Cutting Room, 2026'],
       ['src'=>'/assets/images/products/product8.png',          'tag'=>'PROCESS', 'title'=>'Indigo — Quiet Riot'],
       ['src'=>'/assets/images/about/about2.png',               'tag'=>'STUDIO',  'title'=>'Pattern — Mirror Tee'],
       // Row 4: 1 wide (1/3) + 1 wider (2/3)
@@ -114,7 +114,7 @@
       </div>
       <div class="col-span-1 relative overflow-hidden cursor-zoom-in group lookbook-tile"
            data-lightbox="{{ $r1[1]['src'] }}" data-title="{{ $r1[1]['title'] }}" data-tag="{{ $r1[1]['tag'] }}" data-excerpt="{{ $r1[1]['excerpt'] ?? '' }}" data-date="{{ $r1[1]['date'] ?? '' }}">
-        <div class="aspect-[16/9] overflow-hidden">
+        <div class="h-full w-full overflow-hidden">
           <img src="{{ $r1[1]['src'] }}" alt="{{ $r1[1]['title'] }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         </div>
         <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/55 transition-all duration-500 flex flex-col justify-end p-4 pointer-events-none">
