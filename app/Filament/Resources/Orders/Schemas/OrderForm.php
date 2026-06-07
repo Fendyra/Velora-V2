@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Orders\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Repeater;
 use Filament\Schemas\Components\Section;
@@ -17,7 +18,14 @@ class OrderForm
                 Section::make('Order Information')->schema([
                     TextInput::make('order_number')
                         ->required(),
-                    TextInput::make('status')
+                    Select::make('status')
+                        ->options([
+                            'pending' => 'Pending',
+                            'processing' => 'Processing',
+                            'shipped' => 'Shipped',
+                            'completed' => 'Completed',
+                            'cancelled' => 'Cancelled',
+                        ])
                         ->required()
                         ->default('pending'),
                     TextInput::make('total_amount')
