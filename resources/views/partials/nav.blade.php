@@ -10,7 +10,12 @@
 
       <!-- Left: Navigation -->
       <div class="flex-1 flex items-center justify-start">
-        <nav class="hidden md:flex items-center gap-5">
+        <!-- Hamburger Menu (Mobile/Tablet) -->
+        <button type="button" data-open-drawer="mobile-nav" class="lg:hidden grid place-items-center w-9 h-9 rounded-full border border-bone/20 hover:bg-bone hover:text-ink transition-colors" title="Menu">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-5">
           @foreach ($nav as $n)
             @php $isActive = $routeName === $n['route']; @endphp
             <a href="{{ route($n['route']) }}"
@@ -49,9 +54,9 @@
           @endif
         </button>
 
-        <button type="button" data-open-drawer="cart" class="flex items-center gap-2 px-4 h-9 rounded-full bg-bone text-ink hover:bg-velora hover:text-bone transition-colors">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 7h14l-1.5 11a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
-          <span class="mono text-[11px] tracking-[0.15em]">CART · {{ str_pad((string) $veloraCartCount, 2, '0', STR_PAD_LEFT) }}</span>
+        <button type="button" data-open-drawer="cart" class="flex items-center gap-1.5 md:gap-2 px-3 md:px-4 h-9 rounded-full bg-bone text-ink hover:bg-velora hover:text-bone transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" class="hidden sm:block"><path d="M5 7h14l-1.5 11a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+          <span class="mono text-[10px] md:text-[11px] tracking-[0.1em] md:tracking-[0.15em]">CART<span class="hidden sm:inline"> · {{ str_pad((string) $veloraCartCount, 2, '0', STR_PAD_LEFT) }}</span><span class="sm:hidden">({{ $veloraCartCount }})</span></span>
         </button>
       </div>
 

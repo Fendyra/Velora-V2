@@ -41,6 +41,7 @@
 
   @include('partials.footer')
 
+  @include('partials.mobile-nav')
   @include('partials.search')
   @include('partials.cart')
   @include('partials.wishlist')
