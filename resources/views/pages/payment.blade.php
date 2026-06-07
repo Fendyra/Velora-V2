@@ -56,11 +56,11 @@
         snap.pay('{{ $order->snap_token }}', {
             // Optional
             onSuccess: function(result){
-                window.location.href = "{{ route('success', ['orderId' => $order->order_number, 'total' => $order->total_amount]) }}";
+                window.location.href = "{!! route('success', ['orderId' => $order->order_number, 'total' => $order->total_amount]) !!}";
             },
             // Optional
             onPending: function(result){
-                window.location.href = "{{ route('success', ['orderId' => $order->order_number, 'total' => $order->total_amount]) }}";
+                window.location.href = "{!! route('success', ['orderId' => $order->order_number, 'total' => $order->total_amount]) !!}";
             },
             // Optional
             onError: function(result){

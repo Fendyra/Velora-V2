@@ -5,7 +5,7 @@
   $trackingSteps = [
     ['l' => 'Order received',        's' => 'live', 't' => 'TODAY · ' . now('Asia/Jakarta')->format('H:i')],
     ['l' => 'Atelier processing',    's' => 'next', 't' => 'WED ' . now()->addDays(1)->format('d M')],
-    ['l' => 'Dispatched from Bandung','s' => 'soon','t' => 'THU ' . now()->next('Thursday')->format('d M')],
+    ['l' => 'Dispatched from Yogyakarta','s' => 'soon','t' => 'THU ' . now()->next('Thursday')->format('d M')],
     ['l' => 'Out for delivery',      's' => 'soon', 't' => '~ ' . now()->next('Thursday')->addDays(2)->format('d M')],
   ];
 @endphp
@@ -40,7 +40,7 @@
       Thank you. <span class="italic text-velora">Quietly.</span>
     </h1>
     <p class="mt-6 text-[15px] leading-relaxed text-ink/75 max-w-lg reveal">
-      Order <span class="mono">{{ $orderId }}</span> has been received at the studio. You will hear from us on Thursday, when the box leaves Bandung — and again when it lands.
+      Order <span class="mono">{{ $orderId }}</span> has been received at the studio. You will hear from us on Thursday, when the box leaves Yogyakarata — and again when it lands.
     </p>
 
     <div class="mt-12 grid grid-cols-12 gap-6">
@@ -62,7 +62,7 @@
             <div class="text-ink/55">Method</div>
             <div class="mono text-right">VISA •••• 4242</div>
             <div class="text-ink/55">Dispatch</div>
-            <div class="mono text-right">THU {{ now()->next('Thursday')->format('d M') }} — BANDUNG</div>
+            <div class="mono text-right">THU {{ now()->next('Thursday')->format('d M') }} — YOGYAKARTA</div>
             <div class="text-ink/55">ETA</div>
             <div class="mono text-right">{{ now()->next('Thursday')->addDays(1)->format('d') }} — {{ now()->next('Thursday')->addDays(3)->format('d M') }}</div>
           </div>
@@ -100,14 +100,14 @@
       {{-- Image card --}}
       <div class="col-span-12 lg:col-span-5 reveal">
         <div class="aspect-[4/5] img-zoom overflow-hidden relative">
-          <img src="/assets/images/home/landingpage/model4.png" class="w-full h-full object-cover" />
+          <img src="/assets/images/lookbook/lookbook10.png" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
           <div class="absolute left-5 bottom-5 right-5 text-bone">
             <div class="mono text-[10px] tracking-[0.25em] opacity-75">/ A NOTE FROM THE STUDIO</div>
             <div class="display text-[22px] italic leading-snug mt-2">
               "We open each order by hand. Yours will leave with a small folded note, written this morning."
             </div>
-            <div class="mono text-[10px] tracking-[0.25em] mt-3 opacity-80">— R. PRAKOSO</div>
+            <div class="mono text-[10px] tracking-[0.25em] mt-3 opacity-80">— FENHAIM<</div>
           </div>
         </div>
       </div>
